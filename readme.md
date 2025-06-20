@@ -38,4 +38,5 @@ reboot
 
 ## 🥀references
 config base: https://github.com/Andrey0189/nixos-config
+
 waybar: https://github.com/V3ntus/nixos
