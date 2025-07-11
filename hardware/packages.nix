@@ -13,6 +13,7 @@
     chromium
     vlc
     recaf-launcher
+    obsidian
 
     # Python
     python313
