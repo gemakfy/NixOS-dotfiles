@@ -17,6 +17,8 @@
 
     stylix.url = "github:danth/stylix"; #theme framework on Nixos
 
+    milk-grub-theme.url = "github:gemakfy/MilkGrub";
+
   };
 
   outputs = { nixpkgs, home-manager, stylix, ... }@inputs: {
@@ -24,9 +26,12 @@
       system = "x86_64-linux";
 
       modules = [
+        inputs.milk-grub-theme.nixosModule
         ./hardware/configuration.nix
+        # inputs.zapret.nixosModule
       ];
     };
+
     homeConfigurations.gemakfy = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages."x86_64-linux";
       modules = [
