@@ -3,7 +3,6 @@
 
   environment.systemPackages = with pkgs; [
     #Desktop apps
-    anydesk
     librewolf
     prismlauncher
     ayugram-desktop
@@ -12,7 +11,6 @@
     obs-studio
     chromium
     vlc
-    recaf-launcher
     obsidian
 
     # Python

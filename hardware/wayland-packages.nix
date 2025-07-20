@@ -62,5 +62,6 @@
     powerline-fonts
     powerline-symbols
     nerd-fonts.hack
+    dejavu_fonts
   ];
 }
