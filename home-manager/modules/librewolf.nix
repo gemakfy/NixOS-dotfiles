@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
   programs.librewolf = {
     enable = true;
@@ -7,21 +7,31 @@
       "gemakfy" = {
         id = 0;
         isDefault = true;
-        containersForce = true;
 
         settings = {
-          "browser.search.isUS" = true;
+          # disable containers
+          "privacy.userContext.enabled" = false;
+          "privacy.userContext.ui.enabled" = false;
+
+          # disable bookmarks
+          "browser.toolbars.bookmarks.visibility" = "never";
+          "places.history.enabled" = false;
+          "browser.bookmarks.showMobileBookmarks" = false;
+          "browser.bookmarks.showAllBookmarks" = false;
+          "browser.bookmarks.editDialog.showForNewBookmarks" = false;
           "DisplayBookmarksToolbar" = "never";
+
+          # other settings
+          "browser.search.isUS" = true;
           "distribution.searchplugins.defaultLocale" = "en-US";
           "browser.search.region" = "US";
           "general.useragent.locale" = "en-US";
-          "browser.bookmarks.showMobileBookmarks" = false;
           "browser.download.useDownloadDir" = false;
         };
 
         search = {
           default = "google";
-          order = [ "Google" "Nix Packages" "Nix Options" "Home-manager Options" ];
+          order = [ "google" "Nix Packages" "Nix Options" "Home-manager Options" ];
           engines = {
             "Nix Packages" = {
               urls = [{

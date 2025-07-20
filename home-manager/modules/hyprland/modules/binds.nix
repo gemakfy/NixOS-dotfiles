@@ -1,8 +1,8 @@
 {
   wayland.windowManager.hyprland.settings = {
-    render = {
-    	explicit_sync = 0;
-    };
+    # render = {
+    # 	explicit_sync = 0;
+    # };
     "$mainMod" = "SUPER";
     "$terminal" = "kitty";
     "$menu" = "rofi -show drun";
