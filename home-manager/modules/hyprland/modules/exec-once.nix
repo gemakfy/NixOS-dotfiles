@@ -8,6 +8,6 @@
     #"cliphist wipe"
     "[workspace 3 silent] vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland"
     "[workspace 4 silent] librewolf"
-    #"[workspace 5 silent] spotify"
+    "[workspace 5 silent] spotify"
   ];
 }
