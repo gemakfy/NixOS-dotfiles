@@ -12,6 +12,7 @@
     ./kitty.nix
     ./stylix.nix
     ./proton.nix
+    ./spicetify.nix
 
     ../waybar-gruvbox
   ];

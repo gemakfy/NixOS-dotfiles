@@ -14,6 +14,7 @@
       fzf.enable = true;
       librewolf.enable = true;
       librewolf.profileNames = [ "gemakfy" ];
+      spicetify.enable = true;
 
       dunst.enable = false;
       waybar.enable = false;
