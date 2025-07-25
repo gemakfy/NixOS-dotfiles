@@ -24,7 +24,7 @@
       "$mainMod, X, exec, librewolf"
       "$mainMod, B, exec, spotify --enable-features=UseOzonePlatform --ozone-platform=wayland"
       "$mainMod, T, exec, vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland"# Dwindle
-      "$mainMod, D, exec, ayugram-desktop"
+      "$mainMod, D, exec, AyuGram"
       "$mainMod, O, togglesplit,"
       "$mainMod, P, pseudo,"
       "$mainMod, F, fullscreen"
