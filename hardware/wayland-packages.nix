@@ -44,7 +44,6 @@
     # libs
     bibata-cursors
     gtk4
-    zulu23 # java
 
     # libs for sddm
     sddm-astronaut
