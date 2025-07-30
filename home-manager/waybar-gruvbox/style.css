@@ -1,267 +1,82 @@
-@define-color backgroundlight #000000;
-@define-color backgrounddark #000000;
-@define-color workspacesbackground1 #000000;
-@define-color workspacesbackground2 #222222;
-@define-color bordercolor #000000;
-@define-color textcolor1 #FFFFFF;
-@define-color textcolor2 #FFFFFF;
-@define-color textcolor3 #000000;
-@define-color iconcolor #000000;
-
 * {
-  font-size: 12px;
-  font-family: "SF Pro", "MesloLGS NF", monospace;
-  border: none;
-  border-radius: 0px;
+    border: none;
+    border-radius: 13px;
+    font-family: "Dejavu", mono;
+    font-size: 15px;
 }
 
 window#waybar {
-  background: rgba(255, 255, 255, 0);
-  border-bottom: 0px solid #af3a03;
-  transition-property: background-color;
-  transition-duration: 0.5s;
+    background: transparent;
+    color: #ebdbb3;
 }
 
-/* -- Workspaces -- */
-#workspaces {
-  background: @workspacesbackground1;
-  margin: 5px 1px 6px 1px;
-  padding: 0px 1px;
-  border-radius: 15px;
-  border: 0px;
-  font-weight: bold;
-  font-style: normal;
-  opacity: 0.8;
-  font-size: 16px;
-  color: @textcolor1;
+.modules-left,
+.modules-center,
+.modules-right {
+    background: #4c3836;
+    border-radius: 13px;
+    padding: 1 8px;
+    margin: 5px 4px 0 4px;
 }
 
 #workspaces button {
-  padding: 0px 5px;
-  margin: 4px 4px;
-  border-radius: 15px;
-  border: 0px;
-  color: @textcolor1;
-  background-color: @workspacesbackground2;
-  transition: all 0.3s ease-in-out;
-  opacity: 0.4;
+    padding: 0 5px;
+    background: transparent;
+    color: #a89985;
+    border-radius: 13px;
+    transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
-  color: @textcolor1;
-  background: @workspacesbackground2;
-  border-radius: 15px;
-  min-width: 40px;
-  transition: all 0.3s ease-in-out;
-  opacity: 1;
+    background: #504946;
+    color: #d79922;
+    min-width: 34px;
+    transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
-  color: @textcolor1;
-  background: @workspacesbackground2;
-  border-radius: 15px;
-  opacity: 0.7;
-}
-
-/* -----------------------------------------------------
- * Tooltips
- * ----------------------------------------------------- */
-
-tooltip {
-  border-radius: 10px;
-  background-color: @backgroundlight;
-  opacity: 0.8;
-  padding: 20px;
-  margin: 0px;
-}
-
-tooltip label {
-  color: @textcolor2;
-}
-
-/* -----------------------------------------------------
- * Window
- * ----------------------------------------------------- */
-
-#window {
-  background: @backgroundlight;
-  margin: 8px 15px 8px 0px;
-  padding: 2px 14px 0px 14px;
-  border-radius: 12px;
-  color: @textcolor2;
-  font-size: 16px;
-  font-weight: normal;
-  opacity: 0.8;
-}
-
-window#waybar.empty #window {
-  background-color: transparent;
-}
-
-/* -----------------------------------------------------
- * Taskbar
- * ----------------------------------------------------- */
-
-#taskbar {
-  background: @backgroundlight;
-  margin: 6px 15px 6px 0px;
-  padding: 0px;
-  border-radius: 15px;
-  font-weight: normal;
-  font-style: normal;
-  opacity: 0.8;
-  border: 3px solid @backgroundlight;
-}
-
-#taskbar button {
-  margin: 0;
-  border-radius: 15px;
-  padding: 0px 5px 0px 5px;
-}
-
-/* -----------------------------------------------------
- * Modules
- * ----------------------------------------------------- */
-
-.modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
-}
-
-.modules-right > widget:last-child > #workspaces {
-  margin-right: 0;
-}
-
-/* -----------------------------------------------------
- * Clock
- * ----------------------------------------------------- */
-
-#clock {
-  background-color: @backgrounddark;
-  font-size: 16px;
-  color: @textcolor1;
-  border-radius: 15px;
-  padding: 1px 10px 0px 10px;
-  margin: 8px 15px 8px 0px;
-  opacity: 0.8;
-  border: 3px solid @bordercolor;
-}
-
-/* -----------------------------------------------------
- * Pulseaudio
- * ----------------------------------------------------- */
-
-#pulseaudio {
-  background-color: @backgroundlight;
-  font-size: 16px;
-  color: @textcolor2;
-  border-radius: 15px;
-  padding: 2px 15px 0px 15px;
-  margin: 8px 15px 8px 0px;
-  opacity: 0.8;
-}
-
-#pulseaudio.muted {
-  background-color: @backgrounddark;
-  color: @textcolor1;
-}
-
-/* -----------------------------------------------------
- * Tray
- * ----------------------------------------------------- */
-
-#tray {
-  padding: 0px 15px 0px 0px;
-  color: @textcolor3;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-#tray > .passive {
-  -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-}
-
-#custom-system {
-  margin-right: 15px;
-}
-
-/* -----------------------------------------------------
- * Custom Modules
- * ----------------------------------------------------- */
-
-#custom-appmenu {
-  background-color: @backgrounddark;
-  font-size: 16px;
-  color: @textcolor1;
-  border-radius: 15px;
-  padding: 0px 10px 0px 10px;
-  margin: 8px 14px 8px 14px;
-  opacity: 0.8;
-  border: 3px solid @bordercolor;
+    color: #cc242d;
 }
 
 #custom-appmenuicon {
-  font-size: 26px;
-  color: @textcolor;
-  margin: 0px 15px 0px 10px;
-}
-/* -----------------------------------------------------
- * Spotify Module
- * ----------------------------------------------------- */
-
-#custom-spotify {
-  background-color: @backgrounddark;
-  color: @textcolor1;
-  border-radius: 15px;
-  padding: 2px 15px 0px 10px;
-  margin: 8px 0px;
-  font-size: 16px;
-  font-weight: bold;
-  opacity: 0.9;
-  border: 3px solid @bordercolor;
-}
-
-#custom-spotify.Playing {
-  background-color: #282828;
-  color: #1DB954;
-  animation: spotify-pulse 2s infinite;
-}
-
-#custom-spotify.Paused {
-  background-color: @backgrounddark;
-  color: #a0a0a0;
-}
-
-#custom-spotify.Stopped {
-  background-color: @backgrounddark;
-  color: @textcolor1;
-  opacity: 0.6;
-}
-
-@keyframes spotify-pulse {
-  0% { opacity: 0.9; }
-  50% { opacity: 0.7; }
-  100% { opacity: 0.9; }
-}
-
-#custom-spotify .icon {
-  margin-right: 8px;
-  color: #1DB954;
-  font-size: 18px;
-}
-
-#custom-spotify .text {
-  margin-left: 5px;
-  color: @textcolor1;
+    font-size: 23px;
+    color: #d79922;
+    padding: 1 20 1 0px;
 }
 
 #custom-spotify {
-  transition: all 0.3s ease;
+    color: #d7c7a4;
+    padding: 1 12px;
 }
 
 #custom-spotify:hover {
-  opacity: 1;
-  background-color: #333333;
+    color: #cc242d;
+    transition: all 0.3s ease-in-out;
 }
+
+#pulseaudio {
+    padding: 1 12px;
+    color: #ebdbb3;
+}
+
+#pulseaudio.muted {
+    color: #cc242d;
+}
+
+#clock {
+    padding: 1 12px;
+    font-weight: bold;
+}
+
+#tray {
+    padding: 1 8px;
+}
+
+#keyboard-state {
+    padding: 1 8px;
+}
+
+#keyboard-state label.locked {
+    color: #cc242d;
+}
+
