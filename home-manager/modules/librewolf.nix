@@ -30,7 +30,7 @@
         };
 
         search = {
-          default = "google";
+          default = "duckduckgo";
           order = [ "google" "Nix Packages" "Nix Options" "Home-manager Options" ];
           engines = {
             "Nix Packages" = {
