@@ -13,6 +13,7 @@
     ./stylix.nix
     ./proton.nix
     ./spicetify.nix
+    ./obsidian.nix
 
     ../waybar-gruvbox
   ];
