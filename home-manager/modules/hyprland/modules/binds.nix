@@ -6,7 +6,7 @@
     "$mainMod" = "SUPER";
     "$terminal" = "kitty";
     "$menu" = "rofi -show drun";
-    "$fileManager" = "nautilus";
+    "$fileManager" = "nemo";
 
     bind = [
       # Window/Session actions.
