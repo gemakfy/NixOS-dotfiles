@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     #Desktop apps
     librewolf
+    firefox
     prismlauncher
     ayugram-desktop
     vesktop
@@ -43,6 +44,7 @@
     cava
     qemu # virtualization
     quickemu
+    musikcube # music player
 
     # IP utils
     dnscrypt-proxy2

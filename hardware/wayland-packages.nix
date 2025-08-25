@@ -3,7 +3,6 @@
   environment.systemPackages = with pkgs; [
     # Audio
     pipewire
-    pulseaudio
     pamixer # pulseaudio cli mixer
     alsa-utils
 
@@ -37,7 +36,7 @@
     kitty
     waybar
     quickshell
-    nautilus
+    nemo
 
     home-manager
 
