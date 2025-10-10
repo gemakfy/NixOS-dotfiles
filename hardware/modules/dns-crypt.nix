@@ -1,6 +1,6 @@
 {
   networking.nameservers = [ "127.0.0.1" "::1" ];
-  services.dnscrypt-proxy2 = {
+  services.dnscrypt-proxy = {
     enable = true;
     settings = {
       ipv6_servers = false;
