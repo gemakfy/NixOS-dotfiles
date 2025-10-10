@@ -80,7 +80,7 @@
         };
 
         "custom/spotify" = {
-          format = "{icon} {}";
+          format = "{icon} {text}";
           exec = "playerctl metadata --format '{{title}} - {{artist}}'";
           return-type = "text";
           on-click = "playerctl play-pause";
