@@ -13,6 +13,7 @@
     chromium
     vlc
     obsidian
+    qbittorrent
 
     # Python
     python313

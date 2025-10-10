@@ -30,7 +30,6 @@
       modules = [
         inputs.milk-grub-theme.nixosModule
         ./hardware/configuration.nix
-        # inputs.zapret.nixosModule
       ];
     };
 

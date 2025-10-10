@@ -3,11 +3,10 @@
   environment.systemPackages = with pkgs; [
     # Audio
     pipewire
-    pamixer # pulseaudio cli mixer
     alsa-utils
 
     # Rofi
-    rofi-wayland # launcher
+    rofi # launcher
     rofi-emoji
     cliphist # clipboard
     wl-clipboard
