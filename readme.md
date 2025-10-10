@@ -22,7 +22,7 @@ Gruvbox theme for NixOS with Hyprland.
 # 🛠️ Installation
 ```
 nix-shell -p git
-git clone https://github.com/gemakfy/NixOS-dotfiles
+git clone https://github.com/gemakfy/NixOS-dotfiles --depth=1
 cd ./NixOS-dotfiles/hardware
 rm hardware-configuration.nix
 cp /etc/nixos/hardware-configuration.nix .
@@ -38,5 +38,3 @@ reboot
 
 ## 🥀references
 config base: https://github.com/Andrey0189/nixos-config
-
-waybar: https://github.com/V3ntus/nixos
