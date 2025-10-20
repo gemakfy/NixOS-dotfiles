@@ -5,14 +5,11 @@
     #Desktop apps
     librewolf
     firefox
-    prismlauncher
     ayugram-desktop
     vesktop
     spotify
-    obs-studio
     chromium
     vlc
-    obsidian
     qbittorrent
 
     # Python
@@ -45,13 +42,11 @@
     cava
     qemu # virtualization
     quickemu
-    musikcube # music player
 
     # IP utils
     dnscrypt-proxy2
     nftables
     ipset
-    # Test domain
     whois
     mtr
     dig
