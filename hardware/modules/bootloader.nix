@@ -1,18 +1,7 @@
 { pkgs, config, ... }:
 {
   boot = {
-    # enable silent boot
-    consoleLogLevel = 0; # disable systemd logs
-    initrd.verbose = false;
-
-    kernelParams = [
-      # silent boot
-      "quiet"
-      "splash"
-      "loglevel=3"
-      "udev.log_level=3"
-      "rd.udev.log_level=3"
-    ];
+    initrd.systemd.enable = true;
 
     loader = {
       efi.canTouchEfiVariables = true;
@@ -26,6 +15,15 @@
       pkiBundle = "/var/lib/sbctl";
     };
   };
+
+  # TPM
+  security.tpm2 = {
+    enable = true;
+    pkcs11.enable = true;
+    tctiEnvironment.enable = true;
+  };
+
+  users.users.gemakfy.extraGroups = [ "tss" ];  # tss group has access to TPM devices
 
   # For debugging and troubleshooting Secure Boot.
   environment.systemPackages = with pkgs; [
