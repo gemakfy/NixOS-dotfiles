@@ -17,10 +17,12 @@
 
     stylix.url = "github:danth/stylix"; #theme framework on Nixos
 
-    milk-grub-theme.url = "github:gemakfy/MilkGrub";
-
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, stylix, spicetify-nix, ... }@inputs: {
@@ -28,8 +30,8 @@
       system = "x86_64-linux";
 
       modules = [
-        inputs.milk-grub-theme.nixosModule
         ./hardware/configuration.nix
+        inputs.lanzaboote.nixosModules.lanzaboote
       ];
     };
 
