@@ -49,6 +49,10 @@
     steam.enable = true;
     steam.gamescopeSession.enable = true;
     firejail.enable = true;
+    throne = {
+      enable = true;
+      tunMode.enable = true;
+    };
   };
 
   system.stateVersion = "24.11"; # Did you read the comment?
