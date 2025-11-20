@@ -39,7 +39,7 @@
       pkgs = nixpkgs.legacyPackages."x86_64-linux";
       modules = [
         spicetify-nix.homeManagerModules.spicetify
-        inputs.nixvim.homeManagerModules.nixvim
+        inputs.nixvim.homeModules.nixvim
         stylix.homeModules.stylix
         ./home.nix
       ];

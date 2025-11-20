@@ -12,9 +12,11 @@
 
     treesitter-refactor = {
       enable = true;
-      highlightDefinitions = {
-        enable = true;
-        clearOnCursorMove = false;
+      settings = {
+        highlight_definitions = {
+          enable = true;
+          clear_on_cursor_move = false;
+        };
       };
     };
 
