@@ -19,7 +19,6 @@
     # Wallpapers
     waypaper
     swww
-    mpvpaper
 
     # Hyprland
     hyprland
@@ -34,7 +33,6 @@
     wireplumber
     kitty
     waybar
-    quickshell
     nemo
 
     home-manager
@@ -53,7 +51,7 @@
   fonts.packages = with pkgs; [
     jetbrains-mono
     noto-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     twemoji-color-font
     font-awesome
     powerline-fonts
