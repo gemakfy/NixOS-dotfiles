@@ -4,13 +4,13 @@
   environment.systemPackages = with pkgs; [
     #Desktop apps
     librewolf
-    firefox
     ayugram-desktop
     vesktop
     spotify
     chromium
     vlc
     qbittorrent
+    simplex-chat-desktop
 
     # Python
     python313
@@ -35,7 +35,6 @@
     zathura # vim-like pdf reader
     playerctl
     firejail # namespace-based sandboxing
-    protonup # for steam
     flatpak
     docker
     cmatrix
@@ -44,7 +43,7 @@
     quickemu
 
     # IP utils
-    dnscrypt-proxy2
+    dnscrypt-proxy
     nftables
     ipset
     whois
