@@ -17,7 +17,7 @@ Gruvbox theme for NixOS with Hyprland.
 | [Waybar](https://github.com/Alexays/Waybar) | Panel for Wayland        |
 | [Dunst](https://github.com/dunst-project/dunst)🔔 | Notification Daemon             |
 | [Yazi](https://github.com/sxyazi/yazi)📂 | File Manager|
-| [Xanmod](https://xanmod.org/)⚡ | Linux Kernel              |
+| [Latest](https://kernel.org/)⚡ | Linux Kernel              |
 
 # 🛠️ Installation
 ```
