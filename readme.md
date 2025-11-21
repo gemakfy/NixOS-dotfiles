@@ -20,7 +20,7 @@ Gruvbox theme for NixOS with Hyprland.
 | [Latest](https://kernel.org/)⚡ | Linux Kernel              |
 
 # 🛠️ Installation
-```
+```bash
 nix-shell -p git
 git clone https://github.com/gemakfy/NixOS-dotfiles --depth=1
 cd ./NixOS-dotfiles/hardware
@@ -29,6 +29,15 @@ cp /etc/nixos/hardware-configuration.nix .
 sudo nixos-rebuild switch --flake .
 home-manager switch --flake .
 reboot
+```
+# 🔐 Secure boot
+```bash
+bootctl status # check uefi support
+sudo sbctl create-keys # generate keys
+sudo sbctl verify # check signed
+sudo sbctl enroll-keys --microsoft # enroll keys
+
+# read lanzaboote docs https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md
 ```
 
 > **⚠️ Warning**
