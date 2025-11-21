@@ -16,8 +16,6 @@
       ./modules/bootloader.nix
       ./modules/zram.nix
       ./modules/gamemode.nix
-
-      ./modules/dns-crypt.nix
     ];
 
   boot = {
