@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     #Desktop apps
     librewolf
+    tor-browser
     ayugram-desktop
     vesktop
     spotify
@@ -11,13 +12,16 @@
     vlc
     qbittorrent
     simplex-chat-desktop
+    lunar-client
+    v2rayn
 
     # Python
-    python313
-    python313Packages.flake8
+    python314
+    python314Packages.flake8
     zed-editor
 
     # CLI utils
+    ansible
     vim
     #neovim
     zsh

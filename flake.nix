@@ -17,10 +17,13 @@
 
     stylix.url = "github:danth/stylix"; #theme framework on Nixos
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.3";
+      url = "github:nix-community/lanzaboote/v1.0.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -37,6 +40,7 @@
 
     homeConfigurations.gemakfy = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages."x86_64-linux";
+      extraSpecialArgs = { inherit inputs; };
       modules = [
         spicetify-nix.homeManagerModules.spicetify
         inputs.nixvim.homeModules.nixvim
