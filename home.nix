@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, inputs, ... }: {
 	home = {
 		username = "gemakfy";
 		homeDirectory = "/home/gemakfy";
@@ -9,7 +9,6 @@
 
 	imports = [
     ./home-manager/modules/default.nix
-    #./home-manager/modules/hyprpaper.nix
     ./home-manager/nixvim/nixvim.nix
 	];
 }
