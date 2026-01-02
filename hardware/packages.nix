@@ -3,7 +3,6 @@
 
   environment.systemPackages = with pkgs; [
     #Desktop apps
-    librewolf
     tor-browser
     ayugram-desktop
     vesktop
@@ -30,6 +29,7 @@
     btop
     unzip
     zip
+    _7zz
     unrar
     git
     yazi # TUI

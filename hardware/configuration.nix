@@ -46,10 +46,31 @@
     zsh.enable = true;
     steam.enable = true;
     steam.gamescopeSession.enable = true;
-    firejail.enable = true;
-    throne = {
+    firejail = {
       enable = true;
-      tunMode.enable = true;
+      wrappedBinaries = {
+        ayugram-jail = {
+          executable = "${pkgs.ayugram-desktop}/bin/AyuGram";
+          profile = "${pkgs.firejail}/etc/firejail/telegram.profile";
+          extraArgs = [
+            "--whitelist=~/.local/share/AyuGramDesktop"
+            "--caps.drop=all"
+            "--nonewprivs"
+            "--dbus-user=filter"
+            "--protocol=unix,inet,inet6"
+          ];
+        };
+        spotify-jail = {
+          executable = "/home/gemakfy/.nix-profile/bin/spotify";
+          profile = "${pkgs.firejail}/etc/firejail/spotify.profile";
+          extraArgs = [
+            "--caps.drop=all"
+            "--nonewprivs"
+            "--dbus-user=filter"
+            "--protocol=unix,inet,inet6"
+          ];
+        };
+      };
     };
   };
 
