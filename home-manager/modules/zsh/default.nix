@@ -41,8 +41,6 @@
         cc = "clear";
         v = "nvim";
         f = "nvim $(fzf)";
-        play = "firejail --seccomp --caps.drop=all --nice=1 --nodbus --private=~/Zomboid --profile=steam steam";
-        playn = "firejail --net=none --seccomp --caps.drop=all --nice=1 --nodbus --private=~/Zomboid --profile=steam steam";
       };
   };
 }

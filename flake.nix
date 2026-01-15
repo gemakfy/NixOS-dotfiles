@@ -26,6 +26,11 @@
       url = "github:nix-community/lanzaboote/v1.0.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    silentSDDM = {
+      url = "github:uiriansan/SilentSDDM";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, stylix, spicetify-nix, ... }@inputs: {
@@ -35,6 +40,7 @@
       modules = [
         ./hardware/configuration.nix
         inputs.lanzaboote.nixosModules.lanzaboote
+        inputs.silentSDDM.nixosModules.default
       ];
     };
 

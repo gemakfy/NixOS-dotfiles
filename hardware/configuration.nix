@@ -12,15 +12,22 @@
       ./modules/collect-garbage.nix
       ./modules/pipewire.nix
       ./modules/systemd.nix
-      ./modules/sddm/sddm.nix
+      ./modules/sddm.nix
       ./modules/bootloader.nix
       ./modules/zram.nix
       ./modules/gamemode.nix
+      ./modules/firejail.nix
     ];
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     consoleLogLevel = 0;
+  };
+
+  networking.firewall = {
+    enable = true;
+    checkReversePath = false;
+    allowPing = false;
   };
 
   services.flatpak.enable = true;
@@ -46,32 +53,6 @@
     zsh.enable = true;
     steam.enable = true;
     steam.gamescopeSession.enable = true;
-    firejail = {
-      enable = true;
-      wrappedBinaries = {
-        ayugram-jail = {
-          executable = "${pkgs.ayugram-desktop}/bin/AyuGram";
-          profile = "${pkgs.firejail}/etc/firejail/telegram.profile";
-          extraArgs = [
-            "--whitelist=~/.local/share/AyuGramDesktop"
-            "--caps.drop=all"
-            "--nonewprivs"
-            "--dbus-user=filter"
-            "--protocol=unix,inet,inet6"
-          ];
-        };
-        spotify-jail = {
-          executable = "/home/gemakfy/.nix-profile/bin/spotify";
-          profile = "${pkgs.firejail}/etc/firejail/spotify.profile";
-          extraArgs = [
-            "--caps.drop=all"
-            "--nonewprivs"
-            "--dbus-user=filter"
-            "--protocol=unix,inet,inet6"
-          ];
-        };
-      };
-    };
   };
 
   system.stateVersion = "24.11"; # Did you read the comment?
