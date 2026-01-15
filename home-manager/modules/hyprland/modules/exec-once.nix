@@ -6,8 +6,8 @@
     "wl-paste --type text --watch cliphist store"
     "wl-paste --type image --watch cliphist store"
     #"cliphist wipe"
-    "[workspace 3 silent] vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland"
+    "[workspace 3 silent] vesktop"
     "[workspace 4 silent] librewolf"
-    "[workspace 5 silent] spotify-jail"
+    "[workspace 5 silent] firejail --caps.drop=all --nonewprivs --private-dev --private-tmp --ipc-namespace --noexec=/tmp --disable-mnt --dbus-user=filter --protocol=unix,inet,inet6 --profile=spotify spotify"
   ];
 }

@@ -9,6 +9,11 @@
         enable = true;
         target = "Documents/obsidian-vault";
         settings = {
+          appearance = {
+            baseFontSize = 20;
+          };
+        };
+        settings = {
           themes = [
             {
               pkg = pkgs.fetchFromGitHub {
