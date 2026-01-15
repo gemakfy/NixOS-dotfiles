@@ -8,8 +8,12 @@
       sddm = {
         enable = true;
         wayland.enable = true;
-        theme = "${import ./flower-theme.nix { inherit pkgs;  }}";
       };
     };
+  };
+
+  programs.silentSDDM = {
+    enable = true;
+    theme = "rei";
   };
 }
