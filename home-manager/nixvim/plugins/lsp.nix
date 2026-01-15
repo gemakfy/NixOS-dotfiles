@@ -10,16 +10,6 @@
       };
     };
 
-    treesitter-refactor = {
-      enable = true;
-      settings = {
-        highlight_definitions = {
-          enable = true;
-          clear_on_cursor_move = false;
-        };
-      };
-    };
-
     hmts.enable = true;
 
     lsp = {

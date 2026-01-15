@@ -21,7 +21,7 @@
       rofi.enable = false;
     };
 
-    iconTheme = {
+    icons = {
       enable = true;
       package = pkgs.tela-icon-theme;
       dark = "Tela-dark";
