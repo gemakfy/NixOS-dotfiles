@@ -3,12 +3,10 @@
   programs.firejail = {
     enable = true;
     wrappedBinaries = {
-      ayugram-jail = {
-        executable = "${pkgs.ayugram-desktop}/bin/AyuGram";
+      telegram-jail = {
+        executable = "${pkgs.telegram-desktop}/bin/Telegram";
         profile = "${pkgs.firejail}/etc/firejail/telegram.profile";
         extraArgs = [
-          "--whitelist=~/.local/share/AyuGramDesktop"
-
           "--caps.drop=all"
           "--nonewprivs"
           "--private-dev"

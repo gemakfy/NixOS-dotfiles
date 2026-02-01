@@ -25,7 +25,7 @@
       "$mainMod, B, exec, spotify-jail"
       "$mainMod, T, exec, vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland"# Dwindle
       "$mainMod, W, exec, obsidian-jail"
-      "$mainMod, D, exec, ayugram-jail"
+      "$mainMod, D, exec, telegram-jail"
       "$mainMod, O, togglesplit,"
       "$mainMod, P, pseudo,"
       "$mainMod, F, fullscreen"

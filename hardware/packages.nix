@@ -4,7 +4,7 @@
   environment.systemPackages = with pkgs; [
     #Desktop apps
     tor-browser
-    ayugram-desktop
+    telegram-desktop
     vesktop
     spotify
     chromium
@@ -38,7 +38,6 @@
     fzf # file search
     zathura # vim-like pdf reader
     playerctl
-    firejail # namespace-based sandboxing
     flatpak
     docker
     cmatrix
