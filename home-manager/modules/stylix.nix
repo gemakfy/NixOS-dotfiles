@@ -16,6 +16,7 @@
       librewolf.profileNames = [ "gemakfy" ];
       spicetify.enable = true;
 
+      zathura.enable = false;
       dunst.enable = false;
       waybar.enable = false;
       rofi.enable = false;

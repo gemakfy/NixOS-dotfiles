@@ -14,6 +14,7 @@
     ./proton.nix
     ./spicetify.nix
     ./obsidian.nix
+    ./zathura.nix
 
     ../waybar-gruvbox
   ];
