@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.gamemode = {
     enable = true;
     settings = {
@@ -14,7 +16,6 @@
         energy_perf_bias = "performance";
         min_perf_pct = "100";
       };
-
     };
   };
   powerManagement.cpuFreqGovernor = "performance";

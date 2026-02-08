@@ -1,11 +1,9 @@
-{ pkgs, ... }: {
-
-  #users.defaultUserShell = pkgs.zsh;
+{pkgs, ...}: {
 
   users.users.gemakfy = {
     isNormalUser = true;
     description = "gemakfy";
-    extraGroups = [ "networkmanager" "wheel" "gamemode" ];
+    extraGroups = ["networkmanager" "wheel" "gamemode" "docker"];
     packages = with pkgs; [];
     shell = pkgs.zsh;
   };
@@ -14,9 +12,9 @@
     isNormalUser = true;
     description = "user for tests";
     home = "/home/test";
-    extraGroups = [ ];
+    extraGroups = [];
     shell = pkgs.bash;
     createHome = true;
-    homeMode= "0700";
+    homeMode = "0700";
   };
 }

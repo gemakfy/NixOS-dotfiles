@@ -9,6 +9,6 @@
 
   nix.optimise = {
     automatic = true;
-    dates = [ "monthly" ];
+    dates = ["monthly"];
   };
 }

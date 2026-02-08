@@ -1,23 +1,25 @@
-{ config, pkgs, lib,  ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./packages.nix
-      ./wayland-packages.nix
-      ./modules/nvidia.nix
-      ./modules/user.nix
-      ./modules/locales.nix
-      ./modules/collect-garbage.nix
-      ./modules/pipewire.nix
-      ./modules/systemd.nix
-      ./modules/sddm.nix
-      ./modules/bootloader.nix
-      ./modules/zram.nix
-      ./modules/gamemode.nix
-      ./modules/firejail.nix
-    ];
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+    ./packages.nix
+    ./wayland-packages.nix
+    ./modules/nvidia.nix
+    ./modules/user.nix
+    ./modules/locales.nix
+    ./modules/collect-garbage.nix
+    ./modules/pipewire.nix
+    ./modules/systemd.nix
+    ./modules/sddm.nix
+    ./modules/bootloader.nix
+    ./modules/zram.nix
+    ./modules/gamemode.nix
+    ./modules/firejail.nix
+  ];
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
@@ -45,7 +47,7 @@
     networkmanager.enable = true; # enable networking
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   programs = {
     hyprland.xwayland.enable = true;
@@ -56,5 +58,4 @@
   };
 
   system.stateVersion = "24.11"; # Did you read the comment?
-
 }
