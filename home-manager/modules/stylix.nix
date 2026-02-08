@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
@@ -13,7 +12,7 @@
       vesktop.enable = true;
       fzf.enable = true;
       librewolf.enable = true;
-      librewolf.profileNames = [ "gemakfy" ];
+      librewolf.profileNames = ["gemakfy"];
       spicetify.enable = true;
 
       zathura.enable = false;

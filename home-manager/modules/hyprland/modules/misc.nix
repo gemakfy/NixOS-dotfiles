@@ -5,8 +5,8 @@
       force_default_wallpaper = -1;
     };
     dwindle = {
-    	pseudotile = true;
-    	preserve_split = true;
+      pseudotile = true;
+      preserve_split = true;
     };
   };
 }

@@ -1,6 +1,5 @@
 {
   programs.nixvim.plugins = {
-
     treesitter = {
       enable = true;
       nixvimInjections = true;
@@ -19,7 +18,7 @@
           enable = true;
           settings.plugins = {
             flake8 = {
-              enabled = true;  # Enable Flake8
+              enabled = true; # Enable Flake8
               maxLineLength = 120;
               showsource = true;
             };

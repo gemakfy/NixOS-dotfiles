@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -16,7 +15,7 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" ];
+      plugins = ["git"];
     };
 
     plugins = [
@@ -27,20 +26,19 @@
       }
     ];
 
-    shellAliases =
-      let
-        flake = "--flake ~/nix";
-      in {
-        rb = "sudo nixos-rebuild switch ${flake}";
-        hms = "home-manager switch ${flake}";
-        grb = "sudo nix-collect-garbage";
-        upd = "sudo nixos-rebuild switch --upgrade ${flake}";
-        generations = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
-        ff = "fastfetch";
-        a = "yazi";
-        cc = "clear";
-        v = "nvim";
-        f = "nvim $(fzf)";
-      };
+    shellAliases = let
+      flake = "--flake ~/nix";
+    in {
+      rb = "sudo nixos-rebuild switch ${flake}";
+      hms = "home-manager switch ${flake}";
+      grb = "sudo nix-collect-garbage";
+      upd = "sudo nixos-rebuild switch --upgrade ${flake}";
+      generations = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
+      ff = "fastfetch";
+      a = "yazi";
+      cc = "clear";
+      v = "nvim";
+      f = "nvim $(fzf)";
+    };
   };
 }

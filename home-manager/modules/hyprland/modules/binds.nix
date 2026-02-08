@@ -1,8 +1,5 @@
 {
   wayland.windowManager.hyprland.settings = {
-    # render = {
-    # 	explicit_sync = 0;
-    # };
     "$mainMod" = "SUPER";
     "$terminal" = "kitty";
     "$menu" = "rofi -show drun";
@@ -17,13 +14,13 @@
       "$mainMod, V, togglefloating,"
       "$mainMod, R, exec, $menu"
       "$mainMod SHIFT, R, exec, rofi -modi emoji -show emoji"
-      "$mainMod, Tab, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy" 
+      "$mainMod, Tab, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
       "$mainMod SHIFT, B, exec, pkill waybar && waybar"
       "$mainMod, P, pseudo," # dwindle
       "$mainMod, A, togglesplit," # dwindle
       "$mainMod, X, exec, librewolf"
       "$mainMod, B, exec, spotify-jail"
-      "$mainMod, T, exec, vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland"# Dwindle
+      "$mainMod, T, exec, vesktop"
       "$mainMod, W, exec, obsidian-jail"
       "$mainMod, D, exec, telegram-jail"
       "$mainMod, O, togglesplit,"
@@ -60,7 +57,6 @@
       "$mainMod SHIFT, 8, movetoworkspace, 8"
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
-
 
       # Example special workspace (scratchpad)
       "$mainMod, S, togglespecialworkspace, magic"

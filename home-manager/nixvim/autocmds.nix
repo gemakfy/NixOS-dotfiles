@@ -2,7 +2,7 @@
   programs.nixvim = {
     autoCmd = [
       {
-        event = [ "VimEnter" ];
+        event = ["VimEnter"];
         command = ":TransparentEnable";
       }
     ];

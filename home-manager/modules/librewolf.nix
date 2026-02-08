@@ -1,8 +1,7 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.librewolf = {
     enable = true;
-    languagePacks = [ "ru" ];
+    languagePacks = ["ru"];
     profiles = {
       "gemakfy" = {
         id = 0;
@@ -31,38 +30,53 @@
 
         search = {
           default = "duckduckgo";
-          order = [ "google" "Nix Packages" "Nix Options" "Home-manager Options" ];
+          order = ["google" "Nix Packages" "Nix Options" "Home-manager Options"];
           engines = {
             "Nix Packages" = {
-              urls = [{
-                template = "https://search.nixos.org/packages";
-                params = [
-                  { name = "query"; value = "{searchTerms}"; }
-                ];
-              }];
+              urls = [
+                {
+                  template = "https://search.nixos.org/packages";
+                  params = [
+                    {
+                      name = "query";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
               icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-              definedAliases = [ "@np" ];
+              definedAliases = ["@np"];
             };
 
             "Nix Options" = {
-              definedAliases = [ "@no" ];
-              urls = [{
-                template = "https://search.nixos.org/options";
-                params = [
-                  { name = "query"; value = "{searchTerms}"; }
-                ];
-              }];
+              definedAliases = ["@no"];
+              urls = [
+                {
+                  template = "https://search.nixos.org/options";
+                  params = [
+                    {
+                      name = "query";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
               icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             };
 
             "Home-manager Options" = {
-              definedAliases = [ "@ho" ];
-              urls = [{
-                template = "https://home-manager-options.extranix.com/";
-                params = [
-                  { name = "query"; value = "{searchTerms}"; }
-                ];
-              }];
+              definedAliases = ["@ho"];
+              urls = [
+                {
+                  template = "https://home-manager-options.extranix.com/";
+                  params = [
+                    {
+                      name = "query";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
               icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake-white.svg";
             };
           };

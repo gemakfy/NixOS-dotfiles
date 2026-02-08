@@ -1,9 +1,11 @@
-{ config, pkgs, ... }:
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   inherit (config.lib.formats.rasi) mkLiteral;
-in
-  {
-    programs.rofi = {
+in {
+  programs.rofi = {
     enable = true;
     plugins = [pkgs.rofi-emoji];
     font = "Noto Sans Medium 11";

@@ -1,14 +1,19 @@
-{ config, pkgs, inputs, ... }: {
-	home = {
-		username = "gemakfy";
-		homeDirectory = "/home/gemakfy";
-		stateVersion = "25.05";
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  home = {
+    username = "gemakfy";
+    homeDirectory = "/home/gemakfy";
+    stateVersion = "25.05";
   };
 
   nixpkgs.config.allowUnfree = true;
 
-	imports = [
+  imports = [
     ./home-manager/modules/default.nix
     ./home-manager/nixvim/nixvim.nix
-	];
+  ];
 }

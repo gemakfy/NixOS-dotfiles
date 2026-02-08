@@ -17,7 +17,7 @@
       misc = {};
       surround = {};
       icons = {};
-      };
+    };
     mockDevIcons = true;
   };
 }

@@ -1,7 +1,6 @@
 {
   description = "NIX flake config";
 
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -31,9 +30,16 @@
       url = "github:uiriansan/SilentSDDM";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
   };
 
-  outputs = { nixpkgs, home-manager, stylix, spicetify-nix, ... }@inputs: {
+  outputs = {
+    nixpkgs,
+    home-manager,
+    stylix,
+    spicetify-nix,
+    ...
+  } @ inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
@@ -46,7 +52,7 @@
 
     homeConfigurations.gemakfy = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages."x86_64-linux";
-      extraSpecialArgs = { inherit inputs; };
+      extraSpecialArgs = {inherit inputs;};
       modules = [
         spicetify-nix.homeManagerModules.spicetify
         inputs.nixvim.homeModules.nixvim

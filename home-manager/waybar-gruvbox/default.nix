@@ -42,12 +42,12 @@
           on-click = "activate";
 
           persistent-workspaces = {
-          "1" = [ ];
-          "2" = [ ];
-          "3" = [ ];
-          "4" = [ ];
-          "5" = [ ];
-          "6" = [ ];
+            "1" = [];
+            "2" = [];
+            "3" = [];
+            "4" = [];
+            "5" = [];
+            "6" = [];
           };
 
           format-icons = {
@@ -97,7 +97,7 @@
           spacing = 10;
         };
 
-       pulseaudio = {
+        pulseaudio = {
           format = "{icon} {volume}%";
           format-bluetooth = "{volume}%  {icon} {format_source}";
           format-icons = {
