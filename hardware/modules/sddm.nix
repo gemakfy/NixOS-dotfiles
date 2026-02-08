@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   services = {
     displayManager = {
       defaultSession = "hyprland";

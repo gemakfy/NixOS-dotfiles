@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-
   users.users.gemakfy = {
     isNormalUser = true;
     description = "gemakfy";

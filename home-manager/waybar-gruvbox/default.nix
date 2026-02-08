@@ -1,8 +1,4 @@
 {
-  waybar,
-  pkgs,
-  ...
-}: {
   programs.waybar = {
     enable = true;
 
