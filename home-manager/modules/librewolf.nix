@@ -1,7 +1,8 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.librewolf = {
     enable = true;
-    languagePacks = ["ru"];
+    languagePacks = [ "ru" ];
     profiles = {
       "gemakfy" = {
         id = 0;
@@ -30,7 +31,12 @@
 
         search = {
           default = "duckduckgo";
-          order = ["google" "Nix Packages" "Nix Options" "Home-manager Options"];
+          order = [
+            "google"
+            "Nix Packages"
+            "Nix Options"
+            "Home-manager Options"
+          ];
           engines = {
             "Nix Packages" = {
               urls = [
@@ -45,11 +51,11 @@
                 }
               ];
               icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-              definedAliases = ["@np"];
+              definedAliases = [ "@np" ];
             };
 
             "Nix Options" = {
-              definedAliases = ["@no"];
+              definedAliases = [ "@no" ];
               urls = [
                 {
                   template = "https://search.nixos.org/options";
@@ -65,7 +71,7 @@
             };
 
             "Home-manager Options" = {
-              definedAliases = ["@ho"];
+              definedAliases = [ "@ho" ];
               urls = [
                 {
                   template = "https://home-manager-options.extranix.com/";

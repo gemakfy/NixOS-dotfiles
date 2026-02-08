@@ -38,12 +38,12 @@
           on-click = "activate";
 
           persistent-workspaces = {
-            "1" = [];
-            "2" = [];
-            "3" = [];
-            "4" = [];
-            "5" = [];
-            "6" = [];
+            "1" = [ ];
+            "2" = [ ];
+            "3" = [ ];
+            "4" = [ ];
+            "5" = [ ];
+            "6" = [ ];
           };
 
           format-icons = {
@@ -61,7 +61,9 @@
           };
         };
 
-        "custom/empty" = {format = " ";};
+        "custom/empty" = {
+          format = " ";
+        };
 
         "custom/appmenu" = {
           format = "Apps";
@@ -83,7 +85,7 @@
           on-click-right = "playerctl next";
           escape = true;
           max-length = 40;
-          format-icons = [""];
+          format-icons = [ "" ];
           interval = 1;
           tooltip = true;
         };
@@ -103,7 +105,11 @@
             phone = " ";
             portable = " ";
             car = " ";
-            default = [" " " " " "];
+            default = [
+              " "
+              " "
+              " "
+            ];
           };
           on-click = "kitty alsamixer";
         };

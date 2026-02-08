@@ -9,7 +9,8 @@ let
     frame_crit = "#cc241d";
     frame_main = "#d65d0e";
   };
-in {
+in
+{
   services.dunst = {
     enable = true;
 

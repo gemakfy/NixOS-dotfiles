@@ -3,20 +3,20 @@
     enable = true;
 
     modules = {
-      align = {};
+      align = { };
       pairs.enable = true;
       basics = {
         options.extra_ui = true;
       };
-      clue = {};
-      cursorword = {};
-      doc = {};
-      extra = {};
-      indentscope = {};
-      trailspace = {};
-      misc = {};
-      surround = {};
-      icons = {};
+      clue = { };
+      cursorword = { };
+      doc = { };
+      extra = { };
+      indentscope = { };
+      trailspace = { };
+      misc = { };
+      surround = { };
+      icons = { };
     };
     mockDevIcons = true;
   };

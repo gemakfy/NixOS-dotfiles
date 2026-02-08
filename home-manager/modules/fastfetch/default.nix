@@ -4,7 +4,7 @@
     settings = {
       "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
       display = {
-        color = "hidden_"; #"magenta";
+        color = "hidden_"; # "magenta";
         separator = "    ";
       };
       logo.source = ./lain.png;
