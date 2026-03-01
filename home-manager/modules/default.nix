@@ -11,7 +11,6 @@
     ./zsh
     ./kitty.nix
     ./stylix.nix
-    ./proton.nix
     ./spicetify.nix
     ./obsidian.nix
     ./zathura.nix

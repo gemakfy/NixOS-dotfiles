@@ -26,7 +26,7 @@
       "$mainMod, O, togglesplit,"
       "$mainMod, P, pseudo,"
       "$mainMod, F, fullscreen"
-      ", Print, exec, grimblast --freeze copysave area && mv /home/gemakfy/*.png /home/gemakfy/screenshots"
+      ", Print, exec, hyprshot -m region --freeze -o ~/screenshots/"
 
       # Move focus with mainMod + arrow keys
       "$mainMod, H, movefocus, l"

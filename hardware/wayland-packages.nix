@@ -11,17 +11,13 @@
     cliphist # clipboard
     wl-clipboard
 
-    # Screenshot
-    grim
-    slurp
-    grimblast
-
     # Wallpapers
     waypaper
     swww
 
     # Hyprland
     hyprland
+    hyprshot
     hyprcursor
     hyprpolkitagent
     xwayland
@@ -40,12 +36,6 @@
     # libs
     bibata-cursors
     gtk4
-
-    # libs for sddm
-    sddm-astronaut
-    libsForQt5.qt5.qtsvg
-    libsForQt5.qt5.qtquickcontrols2
-    libsForQt5.qt5.qtgraphicaleffects
   ];
 
   fonts.packages = with pkgs; [

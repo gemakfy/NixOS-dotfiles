@@ -18,12 +18,10 @@
     # Python
     python314
     python314Packages.flake8
-    zed-editor
 
     # CLI utils
     ansible
     vim
-    #neovim
     zsh
     oh-my-zsh
     fastfetch
@@ -40,19 +38,12 @@
     zathura # vim-like pdf reader
     playerctl
     flatpak
-    docker
-    cmatrix
-    cava
     qemu # virtualization
     quickemu
 
     # IP utils
-    dnscrypt-proxy
-    nftables
-    ipset
     whois
     mtr
-    dig
     traceroute
     dig
   ];
