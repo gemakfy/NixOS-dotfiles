@@ -22,7 +22,6 @@
     hyprpolkitagent
     xwayland
     egl-wayland
-    xdg-desktop-portal-hyprland
 
     # Other
     dunst

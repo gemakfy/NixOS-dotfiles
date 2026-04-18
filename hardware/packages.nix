@@ -14,6 +14,9 @@
     simplex-chat-desktop
     lunar-client
     v2rayn
+    antigravity
+    nicotine-plus
+    feishin
 
     # Python
     python314
@@ -34,7 +37,6 @@
     yazi # TUI
     zoxide # modern "cd"
     eza # modern "ls"
-    fzf # file search
     zathura # vim-like pdf reader
     playerctl
     flatpak
