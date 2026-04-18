@@ -1,10 +1,11 @@
 {
   wayland.windowManager.hyprland.settings = {
-    #windowrule = [
-    #  "opacity 0.85 override 0.85 override 1 override,^(kitty)$"
-    #  "opacity 0.8 override 0.7 override 1 override,^(discord)$"
-    #];
-    #windowrulev2 = [
-    #];
+    windowrule = [
+      "match:workspace w[tv1], match:float false, border_size 0"
+      "match:workspace f[1], match:float false, border_size 0"
+
+      "match:class spotify, workspace special:magic silent"
+      "match:class v2rayN, workspace special:magic silent"
+    ];
   };
 }

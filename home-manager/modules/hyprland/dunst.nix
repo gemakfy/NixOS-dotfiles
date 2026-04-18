@@ -80,9 +80,9 @@ in
         timeout = 0;
       };
 
-      fullscreen_delay_everything = {
-        fullscreen = "delay";
-      };
+      # fullscreen_delay_everything = {
+      #   fullscreen = "delay";
+      # };
     };
   };
 }

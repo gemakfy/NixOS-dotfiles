@@ -11,19 +11,15 @@
       "$mainMod, C, killactive,"
       "$mainMod, M, exit"
       "$mainMod, E, exec, $fileManager"
-      "$mainMod, V, togglefloating,"
+      "$mainMod, V, togglefloating"
       "$mainMod, R, exec, $menu"
       "$mainMod SHIFT, R, exec, rofi -modi emoji -show emoji"
       "$mainMod, Tab, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
-      "$mainMod SHIFT, B, exec, pkill waybar && waybar"
-      "$mainMod, P, pseudo," # dwindle
-      "$mainMod, A, togglesplit," # dwindle
       "$mainMod, X, exec, librewolf"
       "$mainMod, B, exec, spotify-jail"
       "$mainMod, T, exec, vesktop"
       "$mainMod, W, exec, obsidian-jail"
       "$mainMod, D, exec, telegram-jail"
-      "$mainMod, O, togglesplit,"
       "$mainMod, P, pseudo,"
       "$mainMod, F, fullscreen"
       ", Print, exec, hyprshot -m region --freeze -o ~/screenshots/"
@@ -69,6 +65,12 @@
     bindm = [
       "$mainMod, mouse:272, movewindow"
       "$mainMod, mouse:273, resizewindow"
+    ];
+    binde = [
+      "$mainMod SHIFT, L, resizeactive, 50 0"
+      "$mainMod SHIFT, H, resizeactive, -50 0"
+      "$mainMod SHIFT, K, resizeactive, 0 -50"
+      "$mainMod SHIFT, J, resizeactive, 0 50"
     ];
     bindel = [
       ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"

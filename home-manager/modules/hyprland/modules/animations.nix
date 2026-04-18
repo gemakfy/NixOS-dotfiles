@@ -1,15 +1,17 @@
 {
   wayland.windowManager.hyprland.settings.animations = {
     enabled = true;
-    bezier = "myBezier, 0.075, 0.7, 0.075, 1.05";
-
+    bezier = [
+      "smoothOut, 0.25, 1, 0.5, 1"
+      "easeOutExpo, 0.16, 1, 0.3, 1"
+    ];
     animation = [
-      "windows, 1, 7, myBezier"
-      "windowsOut, 1, 7, default, popin 70%"
-      "border, 1, 10, default"
-      "borderangle, 1, 8, default"
-      "fade, 1, 2, default"
-      "workspaces, 1, 6, default"
+      "windows, 1, 4, easeOutExpo, popin 80%"
+      "windowsIn, 1, 4, easeOutExpo, popin 80%"
+      "windowsOut, 1, 3, smoothOut, popin 80%"
+      "workspaces, 1, 5, smoothOut, slide"
+      "specialWorkspace, 1, 5, smoothOut, slidevert"
+      "fade, 1, 4, smoothOut"
     ];
   };
 }
