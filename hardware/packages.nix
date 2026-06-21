@@ -6,17 +6,16 @@
     #Desktop apps
     tor-browser
     telegram-desktop
-    vesktop
+    discord
     spotify
     chromium
     vlc
     qbittorrent
     simplex-chat-desktop
-    lunar-client
     v2rayn
-    antigravity
     nicotine-plus
     feishin
+    easyeffects
 
     # Python
     python314
