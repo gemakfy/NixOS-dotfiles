@@ -1,7 +1,7 @@
 {
   imports = [
     ./lualine.nix
-    ./transparent.nix
+    # ./transparent.nix
     ./neotree.nix
     ./mini.nix
     ./comment.nix

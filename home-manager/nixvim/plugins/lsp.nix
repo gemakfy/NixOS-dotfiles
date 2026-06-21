@@ -18,8 +18,7 @@
           enable = true;
           settings.plugins = {
             flake8 = {
-              enabled = true; # Enable Flake8
-              maxLineLength = 120;
+              enabled = true;
               showsource = true;
             };
           };
