@@ -1,4 +1,5 @@
 {
+  wayland.windowManager.hyprland.configType = "hyprlang";
   wayland.windowManager.hyprland.settings.general = {
     allow_tearing = false;
     border_size = 2;

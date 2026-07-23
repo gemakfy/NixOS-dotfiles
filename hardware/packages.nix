@@ -16,6 +16,7 @@
     nicotine-plus
     feishin
     easyeffects
+    lunar-client
 
     # Python
     python314

@@ -13,7 +13,7 @@
 
     # Wallpapers
     waypaper
-    swww
+    awww
 
     # Hyprland
     hyprland
