@@ -18,15 +18,6 @@
     };
   };
 
-  # TPM
-  security.tpm2 = {
-    enable = true;
-    pkcs11.enable = true;
-    tctiEnvironment.enable = true;
-  };
-
-  users.users.gemakfy.extraGroups = [ "tss" ]; # tss group has access to TPM devices
-
   # For debugging and troubleshooting Secure Boot.
   environment.systemPackages = with pkgs; [
     sbctl
