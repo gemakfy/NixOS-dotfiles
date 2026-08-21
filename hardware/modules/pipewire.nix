@@ -1,5 +1,4 @@
 {
-  security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -8,11 +7,23 @@
 
     extraConfig.pipewire."92-low-latency" = {
       "context.properties" = {
-        "default.clock.rate" = 48000;
-        "default.clock.allowed-rates" = [ 44100 48000 88200 96000 176400 192000 352800 384000 ];
-        "default.clock.min-quantum" = 32;
-        "default.clock.max-quantum" = 8192;
+        "default.clock.rate" = 44100;
+        "default.clock.allowed-rates" = [ 44100 48000 88200 96000 ];
       };
+    };
+
+    extraConfig.pipewire."99-fiio-dynamic-rate" = {
+      "monitor.alsa.rules" = [
+        {
+          matches = [ { "node.name" = "~alsa_output.usb-GuangZhou_FiiO.*"; } ];
+          actions = {
+            update-props = {
+              "node.freewheel" = false;
+              "audio.rate" = 0;
+            };
+          };
+        }
+      ];
     };
   };
 }
