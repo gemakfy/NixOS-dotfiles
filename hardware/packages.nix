@@ -6,7 +6,7 @@
     #Desktop apps
     tor-browser
     telegram-desktop
-    discord
+    vesktop
     spotify
     chromium
     vlc
@@ -17,6 +17,9 @@
     feishin
     easyeffects
     lunar-client
+    wireshark
+    prismlauncher
+    bitwarden-desktop
 
     # Python
     python314

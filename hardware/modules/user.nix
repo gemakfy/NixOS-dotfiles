@@ -7,7 +7,7 @@
       "networkmanager"
       "wheel"
       "gamemode"
-      "docker"
+      "wireshark"
     ];
     packages = with pkgs; [ ];
     shell = pkgs.zsh;

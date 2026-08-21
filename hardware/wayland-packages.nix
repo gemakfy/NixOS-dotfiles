@@ -4,6 +4,7 @@
     # Audio
     pipewire
     alsa-utils
+    mpv
 
     # Rofi
     rofi # launcher
@@ -35,10 +36,10 @@
     # libs
     bibata-cursors
     gtk4
+    glfw
   ];
 
   fonts.packages = with pkgs; [
-    jetbrains-mono
     noto-fonts
     noto-fonts-color-emoji
     twemoji-color-font
