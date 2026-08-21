@@ -34,7 +34,7 @@
         ];
       };
       lunarclient-jail = {
-        executable = "${pkgs.gamemode}/bin/gamemoderun ${pkgs.lunar-client}/bin/lunarclient";
+        executable = "${pkgs.lunar-client}/bin/lunarclient";
         profile = null;
         extraArgs = [
           "--noprofile"
@@ -43,6 +43,7 @@
           "--disable-mnt"
           "--ipc-namespace"
           "--protocol=unix,inet,inet6"
+          "--nonewprivs"
 
           "--dbus-user=filter"
           "--dbus-user.talk=com.feralinteractive.GameMode"
@@ -68,6 +69,8 @@
           "--disable-mnt"
           "--ipc-namespace"
           "--protocol=unix,inet,inet6"
+          "--nonewprivs"
+          "--noexec=/tmp"
 
           "--dbus-user=filter"
           "--dbus-user.talk=org.freedesktop.StatusNotifierWatcher"
