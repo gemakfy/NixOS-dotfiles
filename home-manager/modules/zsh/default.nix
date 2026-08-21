@@ -11,7 +11,7 @@
     initContent = ''
       [[ ! -f ${./p10k.zsh} ]] || source ${./p10k.zsh}
       eval "$(zoxide init --cmd cd zsh)"
-      export PATH="$HOME/.cargo/bin:$PATH"
+      export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
     '';
 
     oh-my-zsh = {
@@ -41,7 +41,6 @@
         a = "yazi";
         cc = "clear";
         v = "nvim";
-        f = "nvim $(fzf)";
       };
   };
 }
