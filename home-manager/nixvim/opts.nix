@@ -34,7 +34,7 @@
 
       scrolloff = 12; # Number of screen lines to show around the cursor
 
-      cursorline = false; # Highlight the screen line of the cursor
+      cursorline = true; # Highlight the screen line of the cursor
       cursorcolumn = false; # Highlight the screen column of the cursor
       signcolumn = "yes"; # Whether to show the signcolumn
       colorcolumn = "100"; # Columns to highlight
@@ -43,7 +43,7 @@
 
       fileencoding = "utf-8"; # File-content encoding for the current buffer
 
-      termguicolors = false; # Disables 24-bit RGB color in the |TUI|
+      termguicolors = true; # Enables 24-bit RGB color in the |TUI|
 
       spell = false; # Highlight spelling mistakes (local to window)
       wrap = false; # Prevent text from wrapping

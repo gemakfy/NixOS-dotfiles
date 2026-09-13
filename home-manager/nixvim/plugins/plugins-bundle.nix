@@ -1,7 +1,6 @@
 {
   imports = [
     ./lualine.nix
-    # ./transparent.nix
     ./neotree.nix
     ./mini.nix
     ./comment.nix
@@ -9,5 +8,8 @@
     ./nix.nix
     ./lsp.nix
     ./cmp.nix
+    ./telescope.nix
+    ./which-key.nix
+    ./gitsigns.nix
   ];
 }

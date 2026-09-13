@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [
     ./opts.nix
@@ -8,8 +9,12 @@
 
   programs.nixvim = {
     enable = true;
-
     defaultEditor = true;
-    colorschemes.oxocarbon.enable = true;
+
+    extraPackages = with pkgs; [
+      ripgrep
+      fd
+      nixfmt-rfc-style
+    ];
   };
 }
