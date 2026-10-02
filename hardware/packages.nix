@@ -1,8 +1,14 @@
 { pkgs, ... }:
+let
+  antigravity = pkgs.callPackage ./antigravity.nix { };
+in
 {
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    antigravity
+    sqlitebrowser
+
     #Desktop apps
     tor-browser
     telegram-desktop

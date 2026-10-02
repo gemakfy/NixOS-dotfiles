@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  antigravity = pkgs.callPackage ../antigravity.nix { };
+in
 {
   programs.firejail = {
     enable = true;
@@ -99,6 +102,48 @@
           "--ipc-namespace"
           "--noexec=/tmp"
           "--disable-mnt"
+        ];
+      };
+      antigravity-jail = {
+        executable = "${antigravity}/bin/antigravity";
+        profile = null;
+        extraArgs = [
+          "--noprofile"
+          "--nonewprivs"
+          "--private-tmp"
+          "--disable-mnt"
+          "--ipc-namespace"
+          "--protocol=unix,inet,inet6"
+
+          "--noblacklist=/nix"
+          "--read-only=/nix/store"
+          "--noblacklist=/nix/var/nix/daemon-socket"
+          "--noblacklist=/run/current-system"
+
+          "--env=ELECTRON_DISABLE_SANDBOX=1"
+          "--dbus-user=filter"
+          "--dbus-user.talk=org.freedesktop.Notifications"
+          "--dbus-user.talk=org.freedesktop.portal.Desktop"
+
+          "--mkdir=~/.antigravity-ide"
+          "--mkdir=~/.gemini"
+          "--mkdir=~/.config/antigravity"
+          "--mkdir=~/.config/Antigravity"
+          "--mkdir=~/Documents/huina/mod_analyzer"
+
+          "--whitelist=/home/gemakfy/Documents/huina/mod_analyzer"
+          "--whitelist=/home/gemakfy/nix"
+          "--whitelist=/home/gemakfy/.antigravity-ide"
+          "--whitelist=/home/gemakfy/.gemini"
+          "--whitelist=/home/gemakfy/.cache"
+          "--whitelist=/home/gemakfy/.local/share"
+          "--whitelist=/home/gemakfy/.config/antigravity"
+          "--whitelist=/home/gemakfy/.config/Antigravity"
+
+          "--blacklist=/etc/nixos"
+          "--blacklist=/home/gemakfy/.ssh"
+          "--blacklist=/home/gemakfy/.gnupg"
+          "--blacklist=/home/gemakfy/.aws"
         ];
       };
     };

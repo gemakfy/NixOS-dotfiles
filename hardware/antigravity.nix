@@ -1,25 +1,18 @@
 { lib
 , stdenv
+, fetchurl
 , autoPatchelfHook
 , makeWrapper
 , python3
-# Графика и системные библиотеки
 , alsa-lib
-, at-spi2-atk
 , at-spi2-core
 , cairo
 , cups
 , dbus
 , expat
-, fontconfig
-, freetype
-, gdk-pixbuf
 , glib
 , gtk3
-, libdrm
 , libGL
-, libnotify
-, libsecret
 , libxkbcommon
 , mesa
 , nspr
@@ -27,27 +20,25 @@
 , pango
 , systemd
 , vulkan-loader
-, wayland
-, zlib
 # X11
 , libx11
 , libxcomposite
-, libxcursor
 , libxdamage
 , libxext
 , libxfixes
-, libxi
 , libxrandr
-, libxrender
-, libxtst
 , libxcb
 }:
 
 stdenv.mkDerivation rec {
   pname = "antigravity";
-  version = "2.5.0";
+  version = "2.19.1";
+  buildId = "6046815158665216";
 
-  src = ./Antigravity.tar.gz;
+  src = fetchurl {
+    url = "https://storage.googleapis.com/antigravity-public/antigravity-hub/${version}-${buildId}/linux-x64/Antigravity.tar.gz";
+    hash = "sha256-cGj6Rxw+WhIl4k5PaDSXdIuEnQjscCMT1JxRjNRfpK8=";
+  };
   sourceRoot = "Antigravity-x64";
 
   nativeBuildInputs = [
@@ -59,21 +50,14 @@ stdenv.mkDerivation rec {
   buildInputs = [
     stdenv.cc.cc.lib
     alsa-lib
-    at-spi2-atk
     at-spi2-core
     cairo
     cups
     dbus
     expat
-    fontconfig
-    freetype
-    gdk-pixbuf
     glib
     gtk3
-    libdrm
     libGL
-    libnotify
-    libsecret
     libxkbcommon
     mesa
     nspr
@@ -81,18 +65,12 @@ stdenv.mkDerivation rec {
     pango
     systemd
     vulkan-loader
-    wayland
-    zlib
     libx11
     libxcomposite
-    libxcursor
     libxdamage
     libxext
     libxfixes
-    libxi
     libxrandr
-    libxrender
-    libxtst
     libxcb
   ];
 
@@ -174,7 +152,12 @@ for root, _, files in os.walk(out_dir):
 EOF
 
     # Делаем бинарники исполняемыми перед тем, как отработает autoPatchelfHook
-    find $out/lib/antigravity -type f -exec chmod +x {} +
+    chmod +x \
+      $out/lib/antigravity/antigravity \
+      $out/lib/antigravity/chrome-sandbox \
+      $out/lib/antigravity/chrome_crashpad_handler \
+      $out/lib/antigravity/*.so* \
+      $out/lib/antigravity/resources/bin/*
 
     makeWrapper $out/lib/antigravity/antigravity $out/bin/antigravity \
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ libGL mesa vulkan-loader ]}" \
