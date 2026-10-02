@@ -30,6 +30,7 @@
         };
 
         search = {
+          force = true;
           default = "duckduckgo";
           order = [
             "google"
