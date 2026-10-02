@@ -6,6 +6,7 @@
       font_size = "15";
       confirm_os_window_close = 0;
       enable_audio_bell = false;
+      remember_window_size = false;
     };
   };
 }
